@@ -1,0 +1,2432 @@
+1
+00:00:00,350 --> 00:00:02,580
+hello it's just too hot to be
+
+2
+00:00:02,580 --> 00:00:03,990
+programming indoors today so I've come
+
+3
+00:00:03,990 --> 00:00:06,359
+outside into my garden anyway in this
+
+4
+00:00:06,359 --> 00:00:07,620
+video we're going to be looking at
+
+5
+00:00:07,620 --> 00:00:08,880
+something that's become so ubiquitous
+
+6
+00:00:08,880 --> 00:00:10,500
+you probably don't even realize that
+
+7
+00:00:10,500 --> 00:00:12,210
+it's there I'm going to be looking at
+
+8
+00:00:12,210 --> 00:00:14,790
+panning and zooming to demonstrate
+
+9
+00:00:14,790 --> 00:00:16,619
+panning and zooming I've created a small
+
+10
+00:00:16,619 --> 00:00:18,270
+application in the COTS or game engine
+
+11
+00:00:18,270 --> 00:00:20,699
+and it displays a grid at different
+
+12
+00:00:20,699 --> 00:00:22,740
+spatial scales I can use my middle mouse
+
+13
+00:00:22,740 --> 00:00:24,990
+button to pick up the grid and move it
+
+14
+00:00:24,990 --> 00:00:27,510
+around relative to work iver position
+
+15
+00:00:27,510 --> 00:00:29,849
+the mouse cursor and this is quite
+
+16
+00:00:29,849 --> 00:00:31,080
+important because it doesn't matter
+
+17
+00:00:31,080 --> 00:00:33,780
+where I collect the cursor location the
+
+18
+00:00:33,780 --> 00:00:36,600
+grid moves relative to wordly cursor is
+
+19
+00:00:36,600 --> 00:00:39,329
+on the screen and this gives the really
+
+20
+00:00:39,329 --> 00:00:41,160
+compelling effect that I have indeed
+
+21
+00:00:41,160 --> 00:00:43,559
+picked up the screen space and I'm
+
+22
+00:00:43,559 --> 00:00:45,570
+moving it around with my hand it's a
+
+23
+00:00:45,570 --> 00:00:48,660
+very tactile user interface tactic I've
+
+24
+00:00:48,660 --> 00:00:50,700
+also added the facility to zoom in and
+
+25
+00:00:50,700 --> 00:00:52,230
+out and we can see here now that the
+
+26
+00:00:52,230 --> 00:00:54,000
+grid zooms a little bit strangely
+
+27
+00:00:54,000 --> 00:00:55,530
+because of the very low resolution I'm
+
+28
+00:00:55,530 --> 00:00:57,449
+using in this application so you see the
+
+29
+00:00:57,449 --> 00:00:59,070
+cells aren't quite the same size but
+
+30
+00:00:59,070 --> 00:01:00,660
+that that's irrelevant here what we do
+
+31
+00:01:00,660 --> 00:01:04,099
+see is that the grid grows and shrinks
+
+32
+00:01:04,099 --> 00:01:07,140
+but most importantly it depends where
+
+33
+00:01:07,140 --> 00:01:08,850
+the mouse cursor is as to where the
+
+34
+00:01:08,850 --> 00:01:12,720
+focus of the zoom point is you can see I
+
+35
+00:01:12,720 --> 00:01:14,070
+went to the top left there and I'm
+
+36
+00:01:14,070 --> 00:01:16,320
+moving back out and if I go somewhere
+
+37
+00:01:16,320 --> 00:01:18,030
+down here in the middle just move the
+
+38
+00:01:18,030 --> 00:01:18,990
+cursor out so you can see it on the
+
+39
+00:01:18,990 --> 00:01:21,119
+video and it's always ensures that the
+
+40
+00:01:21,119 --> 00:01:23,100
+point you're zooming into remains in the
+
+41
+00:01:23,100 --> 00:01:25,290
+same location this is to avoid the user
+
+42
+00:01:25,290 --> 00:01:26,960
+getting lost
+
+43
+00:01:26,960 --> 00:01:30,060
+it also doesn't matter how far zoomed in
+
+44
+00:01:30,060 --> 00:01:31,530
+we are when we start doing pan
+
+45
+00:01:31,530 --> 00:01:33,509
+operations the same strategy still
+
+46
+00:01:33,509 --> 00:01:38,340
+applies and in fact once you have
+
+47
+00:01:38,340 --> 00:01:40,439
+established a suitable strategy for
+
+48
+00:01:40,439 --> 00:01:42,090
+world space 2 screen space
+
+49
+00:01:42,090 --> 00:01:44,009
+transformation we can do everything
+
+50
+00:01:44,009 --> 00:01:45,450
+through that transformation so I can
+
+51
+00:01:45,450 --> 00:01:48,240
+even select cells in the grid by
+
+52
+00:01:48,240 --> 00:01:49,500
+clicking on them and it doesn't really
+
+53
+00:01:49,500 --> 00:01:51,270
+matter what the spatial scale or
+
+54
+00:01:51,270 --> 00:01:56,759
+position of the grid is and I can also
+
+55
+00:01:56,759 --> 00:01:58,950
+move the mouse cursor whilst and zooming
+
+56
+00:01:58,950 --> 00:02:03,659
+to get a slight rotation effect there so
+
+57
+00:02:03,659 --> 00:02:04,979
+let's have a quick look at what's going
+
+58
+00:02:04,979 --> 00:02:06,630
+on and we'll start with the easier one
+
+59
+00:02:06,630 --> 00:02:11,280
+panning we've actually done panning
+
+60
+00:02:11,280 --> 00:02:12,690
+several times before in previous videos
+
+61
+00:02:12,690 --> 00:02:13,680
+for example
+
+62
+00:02:13,680 --> 00:02:15,750
+the RPG series as the screen panned
+
+63
+00:02:15,750 --> 00:02:18,000
+around and the Jerry Oh platformer game
+
+64
+00:02:18,000 --> 00:02:20,790
+series and both of those relied on a
+
+65
+00:02:20,790 --> 00:02:22,769
+simple concept that we have a screen
+
+66
+00:02:22,769 --> 00:02:25,650
+space where our top left is zero zero
+
+67
+00:02:25,650 --> 00:02:28,379
+and we have some world space that
+
+68
+00:02:28,379 --> 00:02:30,180
+represents the space we want to draw on
+
+69
+00:02:30,180 --> 00:02:32,790
+the screen I'll just draw that in green
+
+70
+00:02:32,790 --> 00:02:34,950
+here and the reason I'm drawing it
+
+71
+00:02:34,950 --> 00:02:36,540
+off-center like this is to make a point
+
+72
+00:02:36,540 --> 00:02:38,400
+but we can assume that the world space
+
+73
+00:02:38,400 --> 00:02:41,219
+had a one-to-one relationship with the
+
+74
+00:02:41,219 --> 00:02:44,010
+screen so top left of the world space
+
+75
+00:02:44,010 --> 00:02:46,799
+was up here and we also knew that to be
+
+76
+00:02:46,799 --> 00:02:50,069
+zero zero however to pan this around we
+
+77
+00:02:50,069 --> 00:02:52,319
+needed to store two offsets one which
+
+78
+00:02:52,319 --> 00:02:56,329
+was here we're sure it was offset X and
+
+79
+00:02:56,329 --> 00:03:04,409
+one here offset Y and so if we take a
+
+80
+00:03:04,409 --> 00:03:07,739
+point somewhere in world space let's say
+
+81
+00:03:07,739 --> 00:03:12,329
+in this instance it's 10 5 and we wanted
+
+82
+00:03:12,329 --> 00:03:14,340
+to draw that in the corresponding screen
+
+83
+00:03:14,340 --> 00:03:16,349
+space which let's say for argument's
+
+84
+00:03:16,349 --> 00:03:21,870
+sake is about here then the translation
+
+85
+00:03:21,870 --> 00:03:24,510
+was quite simple we simply subtract the
+
+86
+00:03:24,510 --> 00:03:27,180
+offsets from world space to screen space
+
+87
+00:03:27,180 --> 00:03:29,819
+so we go in the X direction and then
+
+88
+00:03:29,819 --> 00:03:33,090
+again in the Y direction therefore
+
+89
+00:03:33,090 --> 00:03:34,829
+without any scaling we can get some very
+
+90
+00:03:34,829 --> 00:03:37,979
+simple equations that the screen space X
+
+91
+00:03:37,979 --> 00:03:41,159
+location is equal to the world X
+
+92
+00:03:41,159 --> 00:03:47,009
+location - some offset X and of course
+
+93
+00:03:47,009 --> 00:03:49,739
+exactly the same goes for the y axis and
+
+94
+00:03:49,739 --> 00:03:51,419
+we'll see this a lot there's a all these
+
+95
+00:03:51,419 --> 00:03:52,650
+things happen to both axes
+
+96
+00:03:52,650 --> 00:03:56,579
+simultaneously and with some very simple
+
+97
+00:03:56,579 --> 00:03:57,930
+algebra we can work out the
+
+98
+00:03:57,930 --> 00:04:00,599
+transformation between world space and
+
+99
+00:04:00,599 --> 00:04:02,790
+screen space so here we've got world x
+
+100
+00:04:02,790 --> 00:04:08,430
+equals screen x plus the offset simple
+
+101
+00:04:08,430 --> 00:04:11,069
+stuff we're going to be using these
+
+102
+00:04:11,069 --> 00:04:13,049
+transformations so much that I really
+
+103
+00:04:13,049 --> 00:04:17,519
+recommend that we have a world to screen
+
+104
+00:04:17,519 --> 00:04:23,599
+function and a screen to world function
+
+105
+00:04:23,599 --> 00:04:26,099
+let's start writing some code to see if
+
+106
+00:04:26,099 --> 00:04:26,400
+we can
+
+107
+00:04:26,400 --> 00:04:28,710
+implement panning I'm going to start
+
+108
+00:04:28,710 --> 00:04:30,150
+with an empty console game engine
+
+109
+00:04:30,150 --> 00:04:31,710
+project and this time I'm going to
+
+110
+00:04:31,710 --> 00:04:33,660
+construct a console which is a 160
+
+111
+00:04:33,660 --> 00:04:36,270
+characters wide by a hundred characters
+
+112
+00:04:36,270 --> 00:04:38,880
+high and each character is 8 by 8 pixels
+
+113
+00:04:38,880 --> 00:04:42,120
+so it's reasonably low resolution and in
+
+114
+00:04:42,120 --> 00:04:43,800
+the on user update function I'm going to
+
+115
+00:04:43,800 --> 00:04:46,259
+draw a grid but the first thing I'll do
+
+116
+00:04:46,259 --> 00:04:49,710
+is clear the screen to black if I want
+
+117
+00:04:49,710 --> 00:04:52,470
+to draw a grid of 10 by 10 cells I need
+
+118
+00:04:52,470 --> 00:04:55,020
+to draw 11 vertical lines and 11
+
+119
+00:04:55,020 --> 00:04:57,840
+horizontal lines I'll do this with a for
+
+120
+00:04:57,840 --> 00:04:59,729
+loop but this for loop you may notice
+
+121
+00:04:59,729 --> 00:05:02,280
+goes to Y is less than or equal to 10 so
+
+122
+00:05:02,280 --> 00:05:04,560
+this effectively gives us 11 iterations
+
+123
+00:05:04,560 --> 00:05:07,620
+through the for loop each cell in my
+
+124
+00:05:07,620 --> 00:05:09,960
+grid is going to be one unit across by
+
+125
+00:05:09,960 --> 00:05:12,840
+one unit high and because I want to keep
+
+126
+00:05:12,840 --> 00:05:14,520
+this code as an example for others to
+
+127
+00:05:14,520 --> 00:05:15,900
+easily follow and implement in their
+
+128
+00:05:15,900 --> 00:05:17,460
+application I'm going to be quite
+
+129
+00:05:17,460 --> 00:05:19,289
+verbose with how I name the variables
+
+130
+00:05:19,289 --> 00:05:21,090
+and I'm leaving out a lot of
+
+131
+00:05:21,090 --> 00:05:23,520
+optimizations so for my line I want to
+
+132
+00:05:23,520 --> 00:05:25,139
+create a start point and an end point
+
+133
+00:05:25,139 --> 00:05:28,199
+designated by the SX and sy and e ex and
+
+134
+00:05:28,199 --> 00:05:31,320
+ey values here and typically what I
+
+135
+00:05:31,320 --> 00:05:33,300
+would do is call the draw line function
+
+136
+00:05:33,300 --> 00:05:35,699
+to draw a line between these coordinates
+
+137
+00:05:35,699 --> 00:05:38,580
+however we need to factor in our offset
+
+138
+00:05:38,580 --> 00:05:40,710
+so we'll come back to this in a little
+
+139
+00:05:40,710 --> 00:05:43,349
+while somewhere in our system we need to
+
+140
+00:05:43,349 --> 00:05:46,229
+store the transformation variables so
+
+141
+00:05:46,229 --> 00:05:47,940
+I'll have two floating point values F
+
+142
+00:05:47,940 --> 00:05:50,820
+offset X and F offset Y I'll initialize
+
+143
+00:05:50,820 --> 00:05:53,190
+those to 0 to begin with and now I'll
+
+144
+00:05:53,190 --> 00:05:55,770
+add my two transformation functions so
+
+145
+00:05:55,770 --> 00:05:57,720
+this is world 2 screen and a
+
+146
+00:05:57,720 --> 00:06:00,419
+corresponding screen to world so let's
+
+147
+00:06:00,419 --> 00:06:02,159
+look at the arguments I'm going to pass
+
+148
+00:06:02,159 --> 00:06:05,909
+in a coordinate in world space X&Y these
+
+149
+00:06:05,909 --> 00:06:07,830
+will be floating point but I'm going to
+
+150
+00:06:07,830 --> 00:06:09,750
+return via the arguments the
+
+151
+00:06:09,750 --> 00:06:11,940
+corresponding screen space coordinate
+
+152
+00:06:11,940 --> 00:06:13,919
+and these are integers because our
+
+153
+00:06:13,919 --> 00:06:16,080
+screen is discretized now we don't have
+
+154
+00:06:16,080 --> 00:06:18,360
+any scaling at the moment so what I'm
+
+155
+00:06:18,360 --> 00:06:21,389
+going to do is just handle the panning
+
+156
+00:06:21,389 --> 00:06:23,840
+so we'll take our screen coordinate and
+
+157
+00:06:23,840 --> 00:06:26,400
+we'll need to cast that to an integer
+
+158
+00:06:26,400 --> 00:06:28,289
+because the operation is going to be
+
+159
+00:06:28,289 --> 00:06:31,490
+performed in floating-point domain and
+
+160
+00:06:31,490 --> 00:06:33,270
+I'm just going to implement the
+
+161
+00:06:33,270 --> 00:06:37,800
+equations that we saw before if I can
+
+162
+00:06:37,800 --> 00:06:38,810
+type
+
+163
+00:06:38,810 --> 00:06:41,510
+there we go and of course we don't want
+
+164
+00:06:41,510 --> 00:06:43,610
+to both of these to be ex we won't want
+
+165
+00:06:43,610 --> 00:06:49,280
+these to be Y in the same way let's
+
+166
+00:06:49,280 --> 00:06:50,360
+handle the screen to world
+
+167
+00:06:50,360 --> 00:06:54,830
+transformation this time we'll need to
+
+168
+00:06:54,830 --> 00:07:00,100
+cast or float our end screen variables
+
+169
+00:07:03,910 --> 00:07:05,990
+let's go back to where we were drawing
+
+170
+00:07:05,990 --> 00:07:08,300
+the grid now what we can see is that the
+
+171
+00:07:08,300 --> 00:07:10,280
+coordinates here are in world space each
+
+172
+00:07:10,280 --> 00:07:12,950
+one of my cells is one by one I'm going
+
+173
+00:07:12,950 --> 00:07:14,900
+to need to convert these to screen space
+
+174
+00:07:14,900 --> 00:07:16,430
+so I'm going to create an additional
+
+175
+00:07:16,430 --> 00:07:18,350
+four variables which are the screen
+
+176
+00:07:18,350 --> 00:07:20,389
+space equivalent of the world space
+
+177
+00:07:20,389 --> 00:07:22,550
+variables and then I'm going to call my
+
+178
+00:07:22,550 --> 00:07:24,979
+world two screen function now all draw
+
+179
+00:07:24,979 --> 00:07:27,139
+routines will only occur in screen space
+
+180
+00:07:27,139 --> 00:07:29,150
+so it's important that we use only the
+
+181
+00:07:29,150 --> 00:07:31,639
+new variables to do this and I'm going
+
+182
+00:07:31,639 --> 00:07:34,000
+to draw the line as a solid white line
+
+183
+00:07:34,000 --> 00:07:37,040
+this code is handled 10 horizontal lines
+
+184
+00:07:37,040 --> 00:07:40,040
+let's take the same code and repeat it
+
+185
+00:07:40,040 --> 00:07:41,360
+this isn't optimal we could do
+
+186
+00:07:41,360 --> 00:07:42,800
+everything in the same loop but I'm
+
+187
+00:07:42,800 --> 00:07:44,690
+trying to keep it as clear as possible
+
+188
+00:07:44,690 --> 00:07:46,669
+and we'll use this loop to draw ten
+
+189
+00:07:46,669 --> 00:07:49,520
+vertical lines as you can see the rest
+
+190
+00:07:49,520 --> 00:07:52,220
+of the function remains unchanged let's
+
+191
+00:07:52,220 --> 00:07:55,640
+take a look well we see a rather boring
+
+192
+00:07:55,640 --> 00:07:58,070
+white square at the top left of our
+
+193
+00:07:58,070 --> 00:08:00,020
+screen well that's kind of what we
+
+194
+00:08:00,020 --> 00:08:02,360
+expect because this square is 10 by 10
+
+195
+00:08:02,360 --> 00:08:05,510
+pixels because us grid was in unitary
+
+196
+00:08:05,510 --> 00:08:08,150
+cell size remember and our offset is
+
+197
+00:08:08,150 --> 00:08:10,760
+currently 0 so our world space is a
+
+198
+00:08:10,760 --> 00:08:13,070
+direct mapping 1 to 1 of our screen
+
+199
+00:08:13,070 --> 00:08:15,950
+space in on user create I'm going to
+
+200
+00:08:15,950 --> 00:08:19,190
+default our offset variables to point to
+
+201
+00:08:19,190 --> 00:08:20,900
+the middle of the screen so I'm going to
+
+202
+00:08:20,900 --> 00:08:22,370
+take the screen width and screen height
+
+203
+00:08:22,370 --> 00:08:23,690
+and divide it by 2
+
+204
+00:08:23,690 --> 00:08:25,880
+but I need to invert this number because
+
+205
+00:08:25,880 --> 00:08:28,550
+the offset is negative because if we
+
+206
+00:08:28,550 --> 00:08:29,990
+study our world two screen function
+
+207
+00:08:29,990 --> 00:08:31,580
+we're going to be subtracting this
+
+208
+00:08:31,580 --> 00:08:33,979
+negative and adding it let's take a look
+
+209
+00:08:33,979 --> 00:08:38,000
+now so now we can see that the top left
+
+210
+00:08:38,000 --> 00:08:40,339
+of our world space is mapped to the
+
+211
+00:08:40,339 --> 00:08:43,279
+middle of our screen space let's push
+
+212
+00:08:43,279 --> 00:08:44,900
+the drawing routines to the bottom of
+
+213
+00:08:44,900 --> 00:08:47,209
+our own user update function and given
+
+214
+00:08:47,209 --> 00:08:48,290
+this is going to be a heavily
+
+215
+00:08:48,290 --> 00:08:49,940
+mouse-driven application I'm going to
+
+216
+00:08:49,940 --> 00:08:51,950
+capture the current mouse coordinates at
+
+217
+00:08:51,950 --> 00:08:53,000
+the start of the routine
+
+218
+00:08:53,000 --> 00:08:56,900
+of course the mouse operates in screen
+
+219
+00:08:56,900 --> 00:08:59,960
+space so whenever the user clicks with
+
+220
+00:08:59,960 --> 00:09:02,450
+the mouse draw a crude mouse cursor in
+
+221
+00:09:02,450 --> 00:09:04,790
+here we need world space to be
+
+222
+00:09:04,790 --> 00:09:07,280
+transformed around where the mouse has
+
+223
+00:09:07,280 --> 00:09:09,590
+selected because we want world space to
+
+224
+00:09:09,590 --> 00:09:11,360
+always remain relative to where the
+
+225
+00:09:11,360 --> 00:09:14,030
+mouse has been pressed and to do this we
+
+226
+00:09:14,030 --> 00:09:16,010
+need to store some additional offset
+
+227
+00:09:16,010 --> 00:09:18,740
+information from the top left of our
+
+228
+00:09:18,740 --> 00:09:20,600
+world space to the current mouse
+
+229
+00:09:20,600 --> 00:09:23,690
+position in world space so we need to
+
+230
+00:09:23,690 --> 00:09:26,360
+store this offset too I'm going to call
+
+231
+00:09:26,360 --> 00:09:28,930
+this start pan X and start pattern Y and
+
+232
+00:09:28,930 --> 00:09:31,190
+I only want to update these variables
+
+233
+00:09:31,190 --> 00:09:33,260
+when the user presses the mouse button
+
+234
+00:09:33,260 --> 00:09:34,970
+so I'll add an if statement that checks
+
+235
+00:09:34,970 --> 00:09:37,070
+to see has my left mouse button been
+
+236
+00:09:37,070 --> 00:09:38,990
+pressed if it has it captures the
+
+237
+00:09:38,990 --> 00:09:41,060
+current screen space mouse coordinates
+
+238
+00:09:41,060 --> 00:09:43,280
+and stores them in start panics and
+
+239
+00:09:43,280 --> 00:09:46,820
+start pan Y as the user drags the mouse
+
+240
+00:09:46,820 --> 00:09:49,430
+we want to update our offset positions
+
+241
+00:09:49,430 --> 00:09:52,430
+to move the world around so I'll respond
+
+242
+00:09:52,430 --> 00:09:56,030
+to that on the be held flag as the user
+
+243
+00:09:56,030 --> 00:09:59,210
+drags the mouse around the screen the
+
+244
+00:09:59,210 --> 00:10:01,100
+mouse coordinates may change but the
+
+245
+00:10:01,100 --> 00:10:09,080
+start pan position doesn't therefore we
+
+246
+00:10:09,080 --> 00:10:11,510
+want to set our offset by the difference
+
+247
+00:10:11,510 --> 00:10:13,280
+between the mouse coordinates and the
+
+248
+00:10:13,280 --> 00:10:16,070
+start pan coordinate I also need to now
+
+249
+00:10:16,070 --> 00:10:18,920
+update my start pan location so in
+
+250
+00:10:18,920 --> 00:10:20,060
+between frames
+
+251
+00:10:20,060 --> 00:10:21,890
+it's as if start pan has been clicked
+
+252
+00:10:21,890 --> 00:10:24,920
+each time I should point out that it
+
+253
+00:10:24,920 --> 00:10:26,089
+doesn't matter if you're using an
+
+254
+00:10:26,089 --> 00:10:28,339
+event-driven framework the concept is
+
+255
+00:10:28,339 --> 00:10:30,080
+exactly the same you just respond to
+
+256
+00:10:30,080 --> 00:10:32,420
+your on click and on left up and on left
+
+257
+00:10:32,420 --> 00:10:35,720
+down or appropriate events so let's take
+
+258
+00:10:35,720 --> 00:10:38,060
+a look now we've got a rectangle in the
+
+259
+00:10:38,060 --> 00:10:39,620
+screen and it doesn't matter where I
+
+260
+00:10:39,620 --> 00:10:42,260
+select with the mouse cursor the world
+
+261
+00:10:42,260 --> 00:10:44,600
+is translated into the screen relative
+
+262
+00:10:44,600 --> 00:10:47,780
+to my mouse cursor so let's try a really
+
+263
+00:10:47,780 --> 00:10:50,540
+odd one down here there we go and of
+
+264
+00:10:50,540 --> 00:10:51,890
+course let's try right in the middle of
+
+265
+00:10:51,890 --> 00:10:55,460
+the rectangle very nice and we should
+
+266
+00:10:55,460 --> 00:10:57,350
+also handle something in the negative
+
+267
+00:10:57,350 --> 00:10:58,820
+domain as well so we know in our world
+
+268
+00:10:58,820 --> 00:11:01,160
+space the current screen cursor will be
+
+269
+00:11:01,160 --> 00:11:03,740
+in negative world space and that works
+
+270
+00:11:03,740 --> 00:11:06,490
+just fine
+
+271
+00:11:06,800 --> 00:11:09,720
+to put that back in the middle for next
+
+272
+00:11:09,720 --> 00:11:12,360
+time and that's all there is to panning
+
+273
+00:11:12,360 --> 00:11:13,560
+it's pretty simple isn't it
+
+274
+00:11:13,560 --> 00:11:15,510
+however zooming is a little bit more
+
+275
+00:11:15,510 --> 00:11:19,230
+complicated zooming requires that we
+
+276
+00:11:19,230 --> 00:11:21,930
+somehow scale the world space as part of
+
+277
+00:11:21,930 --> 00:11:23,610
+our world to screen and screen to world
+
+278
+00:11:23,610 --> 00:11:25,950
+transforms so I'm going to store two
+
+279
+00:11:25,950 --> 00:11:28,320
+additional variables scale X and scale Y
+
+280
+00:11:28,320 --> 00:11:30,090
+and by default I'm going to set them to
+
+281
+00:11:30,090 --> 00:11:33,360
+one so that maintains our direct mapping
+
+282
+00:11:33,360 --> 00:11:36,360
+between world and screen space now to my
+
+283
+00:11:36,360 --> 00:11:38,100
+shame I have no mechanism for capturing
+
+284
+00:11:38,100 --> 00:11:39,630
+the mouse wheel as part of the console
+
+285
+00:11:39,630 --> 00:11:41,370
+game engine I certainly will add that in
+
+286
+00:11:41,370 --> 00:11:43,320
+the future but typically you would want
+
+287
+00:11:43,320 --> 00:11:45,690
+to use the pressing of the mouse wheel
+
+288
+00:11:45,690 --> 00:11:48,630
+as part of the panning operation and the
+
+289
+00:11:48,630 --> 00:11:50,490
+scrolling of the mouse wheel as part of
+
+290
+00:11:50,490 --> 00:11:52,650
+the zooming operation I'm going to
+
+291
+00:11:52,650 --> 00:11:55,140
+emulate this with the Q and a keys being
+
+292
+00:11:55,140 --> 00:11:59,670
+held down so I want to zoom in
+
+293
+00:11:59,670 --> 00:12:01,920
+ie make things larger when I hold down
+
+294
+00:12:01,920 --> 00:12:04,790
+the Q key and all I'm doing here is
+
+295
+00:12:04,790 --> 00:12:08,550
+increasing the scale value by 0.1
+
+296
+00:12:08,550 --> 00:12:11,070
+percent and on the contrary if I want to
+
+297
+00:12:11,070 --> 00:12:13,440
+zoom out ie make things smaller I need
+
+298
+00:12:13,440 --> 00:12:15,780
+to decrease my scale value also by one
+
+299
+00:12:15,780 --> 00:12:18,510
+percent different policies for changing
+
+300
+00:12:18,510 --> 00:12:20,220
+the scale variables can be implemented
+
+301
+00:12:20,220 --> 00:12:22,080
+here in this instance this is a very
+
+302
+00:12:22,080 --> 00:12:24,420
+smooth scaling effect you might want to
+
+303
+00:12:24,420 --> 00:12:27,840
+scale in discrete steps but the downside
+
+304
+00:12:27,840 --> 00:12:29,640
+to this approach is it is effectively
+
+305
+00:12:29,640 --> 00:12:32,430
+linear so as you start to zoom in you
+
+306
+00:12:32,430 --> 00:12:34,260
+need to zoom in a lot more to see any
+
+307
+00:12:34,260 --> 00:12:36,810
+difference on the screen space but don't
+
+308
+00:12:36,810 --> 00:12:38,400
+let that put you off trying this method
+
+309
+00:12:38,400 --> 00:12:40,920
+this gives a very nice feeling zoom now
+
+310
+00:12:40,920 --> 00:12:42,600
+as I've already mentioned scaling is
+
+311
+00:12:42,600 --> 00:12:44,640
+simply adding multiplication of the
+
+312
+00:12:44,640 --> 00:12:46,920
+scaling value somewhere in our transform
+
+313
+00:12:46,920 --> 00:12:48,750
+and so when we're going from world to
+
+314
+00:12:48,750 --> 00:12:51,330
+screen once we've transformed the offset
+
+315
+00:12:51,330 --> 00:12:53,880
+we just want to multiply by our scale
+
+316
+00:12:53,880 --> 00:13:02,610
+value scale X and F scale Y and if we do
+
+317
+00:13:02,610 --> 00:13:04,440
+the algebra that means in our screen to
+
+318
+00:13:04,440 --> 00:13:07,470
+world transform we want to divide by F
+
+319
+00:13:07,470 --> 00:13:14,020
+scale X here an F scale Y
+
+320
+00:13:14,020 --> 00:13:16,149
+if you're just starting out on your
+
+321
+00:13:16,149 --> 00:13:18,040
+programming adventure you always want to
+
+322
+00:13:18,040 --> 00:13:19,570
+be careful when you see divides like
+
+323
+00:13:19,570 --> 00:13:21,550
+this because you might hit a divide by
+
+324
+00:13:21,550 --> 00:13:24,040
+zero error however we've ensured that
+
+325
+00:13:24,040 --> 00:13:25,750
+that can't happen with the way that
+
+326
+00:13:25,750 --> 00:13:27,910
+we're handling the zoom value this can
+
+327
+00:13:27,910 --> 00:13:31,029
+never be zero unless you're one of those
+
+328
+00:13:31,029 --> 00:13:32,589
+people that would like to start arguing
+
+329
+00:13:32,589 --> 00:13:33,820
+about the properties of floating-point
+
+330
+00:13:33,820 --> 00:13:38,860
+numbers so let's take a look here's the
+
+331
+00:13:38,860 --> 00:13:41,380
+grid and if I press the Q key to zoom in
+
+332
+00:13:41,380 --> 00:13:43,930
+or we see the grid sort of shoots off to
+
+333
+00:13:43,930 --> 00:13:46,510
+the bottom right and if i zoom out it
+
+334
+00:13:46,510 --> 00:13:48,399
+gets smaller enlarges so I'm confident
+
+335
+00:13:48,399 --> 00:13:50,080
+that the scaling is actually working
+
+336
+00:13:50,080 --> 00:13:52,930
+but the position of where the scale is
+
+337
+00:13:52,930 --> 00:13:55,870
+occurring around doesn't seem right and
+
+338
+00:13:55,870 --> 00:13:57,940
+that's because our scale is completely
+
+339
+00:13:57,940 --> 00:14:00,459
+centered around zero zero and so the
+
+340
+00:14:00,459 --> 00:14:02,980
+offset from will to screen space is also
+
+341
+00:14:02,980 --> 00:14:07,120
+scaled this isn't quite right and we can
+
+342
+00:14:07,120 --> 00:14:08,950
+demonstrate this to be the case if I
+
+343
+00:14:08,950 --> 00:14:11,620
+push our world space to be right up in
+
+344
+00:14:11,620 --> 00:14:14,020
+the top left of our screen space this
+
+345
+00:14:14,020 --> 00:14:15,970
+will be approximate and I choose to zoom
+
+346
+00:14:15,970 --> 00:14:18,810
+in we see it zooms in reasonably
+
+347
+00:14:18,810 --> 00:14:25,930
+appropriately but as soon as I start to
+
+348
+00:14:25,930 --> 00:14:31,120
+pan it all starts to fall apart it
+
+349
+00:14:31,120 --> 00:14:32,589
+becomes very difficult for the user to
+
+350
+00:14:32,589 --> 00:14:36,880
+use instead I want the world space to
+
+351
+00:14:36,880 --> 00:14:38,649
+scale around where the current mouse
+
+352
+00:14:38,649 --> 00:14:43,329
+cursor is in world space so here the
+
+353
+00:14:43,329 --> 00:14:45,670
+black line outlines my screen space and
+
+354
+00:14:45,670 --> 00:14:48,490
+the green line implements my world space
+
+355
+00:14:48,490 --> 00:14:52,779
+before I have done a zoom if I want to
+
+356
+00:14:52,779 --> 00:14:55,089
+zoom around this location so that's
+
+357
+00:14:55,089 --> 00:14:57,640
+where my mouse cursor is and I choose to
+
+358
+00:14:57,640 --> 00:15:00,459
+zoom in the effect that I want is that
+
+359
+00:15:00,459 --> 00:15:02,910
+this point remains the same
+
+360
+00:15:02,910 --> 00:15:04,870
+unfortunately we already have the
+
+361
+00:15:04,870 --> 00:15:07,120
+facilities to handle all of this because
+
+362
+00:15:07,120 --> 00:15:08,950
+if I know where my mouse coordinate is
+
+363
+00:15:08,950 --> 00:15:13,470
+in world space before I zoom it's here
+
+364
+00:15:13,470 --> 00:15:16,420
+after the scaling my mouse coordinate
+
+365
+00:15:16,420 --> 00:15:19,779
+has also been zoomed and if we assume
+
+366
+00:15:19,779 --> 00:15:21,700
+that scaling is happening around zero
+
+367
+00:15:21,700 --> 00:15:24,100
+zero which it currently is so my zoom
+
+368
+00:15:24,100 --> 00:15:26,610
+has actually happened here
+
+369
+00:15:26,610 --> 00:15:28,550
+so my new mouse
+
+370
+00:15:28,550 --> 00:15:32,950
+ordinate after the zoom is about here
+
+371
+00:15:32,950 --> 00:15:35,300
+well if I look at the difference between
+
+372
+00:15:35,300 --> 00:15:37,790
+the presumed mouse coordinates and the
+
+373
+00:15:37,790 --> 00:15:40,940
+post zoomed mouse coordinates I can
+
+374
+00:15:40,940 --> 00:15:43,130
+create a vector which I can use to
+
+375
+00:15:43,130 --> 00:15:46,700
+offset the new world space because this
+
+376
+00:15:46,700 --> 00:15:49,399
+vector will be the same as the vector
+
+377
+00:15:49,399 --> 00:15:52,820
+that we need to displace the world so
+
+378
+00:15:52,820 --> 00:15:55,279
+before we do any zooming I'm going to
+
+379
+00:15:55,279 --> 00:15:57,769
+capture the mouse position in world
+
+380
+00:15:57,769 --> 00:15:59,839
+space and this is very simply done
+
+381
+00:15:59,839 --> 00:16:02,089
+because we have the screen to world
+
+382
+00:16:02,089 --> 00:16:04,370
+function after the zoom I want to do the
+
+383
+00:16:04,370 --> 00:16:06,350
+same thing but don't forget the scale
+
+384
+00:16:06,350 --> 00:16:08,600
+has changed so the internals of the
+
+385
+00:16:08,600 --> 00:16:10,100
+screen to world function has also
+
+386
+00:16:10,100 --> 00:16:12,769
+changed and once I have the before zoom
+
+387
+00:16:12,769 --> 00:16:15,140
+coordinate and the after zoom coordinate
+
+388
+00:16:15,140 --> 00:16:17,510
+I can subtract them and update the
+
+389
+00:16:17,510 --> 00:16:19,790
+offset accordingly to displace the world
+
+390
+00:16:19,790 --> 00:16:22,700
+around the mouse cursor so let's take a
+
+391
+00:16:22,700 --> 00:16:27,440
+look well start to zoom in now oh it
+
+392
+00:16:27,440 --> 00:16:29,209
+seems to be a bit jittery and all over
+
+393
+00:16:29,209 --> 00:16:32,269
+the place that said it's not going
+
+394
+00:16:32,269 --> 00:16:35,510
+completely out of control it still
+
+395
+00:16:35,510 --> 00:16:37,520
+doesn't feel quite right why might this
+
+396
+00:16:37,520 --> 00:16:41,540
+be well the answer lies here and it's
+
+397
+00:16:41,540 --> 00:16:43,760
+where we create the offset for the mouse
+
+398
+00:16:43,760 --> 00:16:46,370
+this currently only ever exists in
+
+399
+00:16:46,370 --> 00:16:48,320
+screen space we're not doing any scaling
+
+400
+00:16:48,320 --> 00:16:50,959
+here so I'm going to divide by our scale
+
+401
+00:16:50,959 --> 00:16:56,060
+values - and you might think well why
+
+402
+00:16:56,060 --> 00:16:58,220
+was that necessary well if you look at
+
+403
+00:16:58,220 --> 00:17:00,410
+this this is translating mouse
+
+404
+00:17:00,410 --> 00:17:03,829
+coordinates differences into a world
+
+405
+00:17:03,829 --> 00:17:07,369
+space offset and so that's a screen to
+
+406
+00:17:07,369 --> 00:17:09,260
+world transform slightly different in
+
+407
+00:17:09,260 --> 00:17:11,780
+this context but we can see in our
+
+408
+00:17:11,780 --> 00:17:13,520
+screen - world transform we're also
+
+409
+00:17:13,520 --> 00:17:16,760
+dividing by the scale value - let's try
+
+410
+00:17:16,760 --> 00:17:20,059
+again hmmm well it's still a bit jittery
+
+411
+00:17:20,059 --> 00:17:22,880
+but at least now the zooming is actually
+
+412
+00:17:22,880 --> 00:17:25,160
+happening around the mouse cursor and if
+
+413
+00:17:25,160 --> 00:17:27,470
+I start to pan the scene that works
+
+414
+00:17:27,470 --> 00:17:29,780
+equally well - so what's going on with
+
+415
+00:17:29,780 --> 00:17:31,910
+this horrible jitter and it doesn't take
+
+416
+00:17:31,910 --> 00:17:34,100
+long for me to discover the problem it's
+
+417
+00:17:34,100 --> 00:17:35,929
+that I clearly don't know how to program
+
+418
+00:17:35,929 --> 00:17:38,330
+at all here I'm casting this floating
+
+419
+00:17:38,330 --> 00:17:40,640
+point calculation to an integer before
+
+420
+00:17:40,640 --> 00:17:42,730
+multiplying it by our scaling value
+
+421
+00:17:42,730 --> 00:17:45,350
+I've got brackets in the wrong place I
+
+422
+00:17:45,350 --> 00:17:48,410
+need to enclose all of this calculation
+
+423
+00:17:48,410 --> 00:17:54,590
+and now you can see the zoom is very
+
+424
+00:17:54,590 --> 00:17:57,050
+smooth indeed Schoolboy area though
+
+425
+00:17:57,050 --> 00:17:58,450
+never mind
+
+426
+00:17:58,450 --> 00:18:00,920
+well that was all quite embarrassing but
+
+427
+00:18:00,920 --> 00:18:02,720
+whenever you see sort of jittering like
+
+428
+00:18:02,720 --> 00:18:04,550
+this that's usually a solid indication
+
+429
+00:18:04,550 --> 00:18:06,560
+that there is an integer to float or the
+
+430
+00:18:06,560 --> 00:18:08,090
+other way around conversion not
+
+431
+00:18:08,090 --> 00:18:10,960
+happening quite as you'd expect it to
+
+432
+00:18:10,960 --> 00:18:13,460
+now that we have working panning and
+
+433
+00:18:13,460 --> 00:18:13,940
+zooming
+
+434
+00:18:13,940 --> 00:18:15,790
+we can start to do other operations
+
+435
+00:18:15,790 --> 00:18:18,260
+using our will to screen and screen to
+
+436
+00:18:18,260 --> 00:18:20,240
+world transforms so the first one might
+
+437
+00:18:20,240 --> 00:18:22,070
+be to actually select something in world
+
+438
+00:18:22,070 --> 00:18:24,800
+space I'm going to add the two variables
+
+439
+00:18:24,800 --> 00:18:27,440
+selected cell X and selected cell Y and
+
+440
+00:18:27,440 --> 00:18:29,870
+at that location in world space I'm
+
+441
+00:18:29,870 --> 00:18:32,630
+going to draw a red circle so after I've
+
+442
+00:18:32,630 --> 00:18:35,180
+drawn the grid I'm going to transform
+
+443
+00:18:35,180 --> 00:18:37,400
+the selected cell in world space to
+
+444
+00:18:37,400 --> 00:18:39,860
+screen space don't forget my cells were
+
+445
+00:18:39,860 --> 00:18:41,690
+one by one so if I want the circle to
+
+446
+00:18:41,690 --> 00:18:43,250
+appear in the middle of the grid I have
+
+447
+00:18:43,250 --> 00:18:45,260
+to add point five to it in this instance
+
+448
+00:18:45,260 --> 00:18:47,420
+I also need to scale the radius of the
+
+449
+00:18:47,420 --> 00:18:49,310
+circle and I'm just going to use the X
+
+450
+00:18:49,310 --> 00:18:51,890
+scaling factor to do this throughout
+
+451
+00:18:51,890 --> 00:18:53,810
+this program we've kept scale X and
+
+452
+00:18:53,810 --> 00:18:56,000
+scale Y independent and this would allow
+
+453
+00:18:56,000 --> 00:18:58,670
+later on to scale independently in those
+
+454
+00:18:58,670 --> 00:19:00,650
+axes if you've got a plotting program
+
+455
+00:19:00,650 --> 00:19:02,360
+for example that might be quite a useful
+
+456
+00:19:02,360 --> 00:19:04,100
+thing but in this case I know that my
+
+457
+00:19:04,100 --> 00:19:06,410
+scale X and scale y always change as a
+
+458
+00:19:06,410 --> 00:19:08,240
+pair so I can take one of them they
+
+459
+00:19:08,240 --> 00:19:10,250
+always assume the same value and now
+
+460
+00:19:10,250 --> 00:19:12,290
+that I have my transformed circle
+
+461
+00:19:12,290 --> 00:19:14,450
+coordinates I can simply draw a circle
+
+462
+00:19:14,450 --> 00:19:17,270
+in screen space to work out which cell
+
+463
+00:19:17,270 --> 00:19:19,580
+the user has selected I need to take my
+
+464
+00:19:19,580 --> 00:19:21,560
+mouse coordinate and translate it to
+
+465
+00:19:21,560 --> 00:19:24,890
+world space now I already have grabbing
+
+466
+00:19:24,890 --> 00:19:26,330
+the mouse coordinates is the first thing
+
+467
+00:19:26,330 --> 00:19:28,550
+that I do in my program and I could
+
+468
+00:19:28,550 --> 00:19:30,410
+probably get away with using that but
+
+469
+00:19:30,410 --> 00:19:32,420
+the most accurate Mouse coordinate is
+
+470
+00:19:32,420 --> 00:19:34,610
+now the mouse coordinate after any
+
+471
+00:19:34,610 --> 00:19:36,980
+zooming has occurred and so I'm going to
+
+472
+00:19:36,980 --> 00:19:40,010
+set my selected cell coordinate based on
+
+473
+00:19:40,010 --> 00:19:42,680
+my transformed mouse world coordinate
+
+474
+00:19:42,680 --> 00:19:44,810
+after any zooming has occurred I'm going
+
+475
+00:19:44,810 --> 00:19:48,620
+to do this on a right-click let's take a
+
+476
+00:19:48,620 --> 00:19:50,860
+look
+
+477
+00:19:51,830 --> 00:19:54,400
+so I'll just zoom in a little bit here
+
+478
+00:19:54,400 --> 00:19:57,170
+and we can see in the top left we have a
+
+479
+00:19:57,170 --> 00:19:59,150
+circle crudely drawn again low
+
+480
+00:19:59,150 --> 00:20:02,630
+resolution in the cell zero zero and if
+
+481
+00:20:02,630 --> 00:20:04,580
+I right-click somewhere else on the grid
+
+482
+00:20:04,580 --> 00:20:07,700
+we can see it's working quite nicely and
+
+483
+00:20:07,700 --> 00:20:09,140
+of course I can pick it up and pan it
+
+484
+00:20:09,140 --> 00:20:11,360
+and still select and it selects the
+
+485
+00:20:11,360 --> 00:20:13,190
+right cells it doesn't matter what the
+
+486
+00:20:13,190 --> 00:20:15,860
+zoom level is either the transformation
+
+487
+00:20:15,860 --> 00:20:18,500
+is fine you can imagine this having lots
+
+488
+00:20:18,500 --> 00:20:21,440
+of applications in level editors image
+
+489
+00:20:21,440 --> 00:20:23,540
+editors and I think all sorts of
+
+490
+00:20:23,540 --> 00:20:25,550
+different 2d applications that's why
+
+491
+00:20:25,550 --> 00:20:27,590
+this is such a useful tool to have in
+
+492
+00:20:27,590 --> 00:20:29,870
+your programming toolbox there are also
+
+493
+00:20:29,870 --> 00:20:32,060
+a number of other optimizations we can
+
+494
+00:20:32,060 --> 00:20:34,400
+exploit now now that we have a mapping
+
+495
+00:20:34,400 --> 00:20:37,160
+between world space and screen space why
+
+496
+00:20:37,160 --> 00:20:39,170
+draw parts of the world that you can't
+
+497
+00:20:39,170 --> 00:20:43,550
+see how can we clip it well I could very
+
+498
+00:20:43,550 --> 00:20:45,950
+simply create four variables which
+
+499
+00:20:45,950 --> 00:20:47,690
+represent the left top right and bottom
+
+500
+00:20:47,690 --> 00:20:51,530
+of the world in screen space and I use
+
+501
+00:20:51,530 --> 00:20:53,930
+the screen to world function to take my
+
+502
+00:20:53,930 --> 00:20:56,960
+top left coordinates and put them in
+
+503
+00:20:56,960 --> 00:20:59,420
+world space and I can do the same for
+
+504
+00:20:59,420 --> 00:21:01,610
+the bottom right by using the size of
+
+505
+00:21:01,610 --> 00:21:03,560
+the console and I can use these values
+
+506
+00:21:03,560 --> 00:21:06,530
+to decide what I draw to the screen or
+
+507
+00:21:06,530 --> 00:21:08,900
+not I mean after all why draw things
+
+508
+00:21:08,900 --> 00:21:11,120
+that you can't see so to demonstrate
+
+509
+00:21:11,120 --> 00:21:13,130
+this I'm going to keep a track of how
+
+510
+00:21:13,130 --> 00:21:15,170
+many lines that I'm drawing with the
+
+511
+00:21:15,170 --> 00:21:18,200
+lines drawn variable if a line gets
+
+512
+00:21:18,200 --> 00:21:19,730
+drawn I'm going to increment that
+
+513
+00:21:19,730 --> 00:21:23,540
+variable and what we do for white will
+
+514
+00:21:23,540 --> 00:21:27,020
+also do for X and because we've chosen a
+
+515
+00:21:27,020 --> 00:21:29,150
+low resolution means I can easily draw
+
+516
+00:21:29,150 --> 00:21:30,770
+strings and we can read them at the same
+
+517
+00:21:30,770 --> 00:21:36,920
+time let's take a look so currently all
+
+518
+00:21:36,920 --> 00:21:38,900
+the lines of the grid are drawn that's
+
+519
+00:21:38,900 --> 00:21:42,590
+all 22 of them as we start to zoom in we
+
+520
+00:21:42,590 --> 00:21:44,840
+can see our lines drawn count is
+
+521
+00:21:44,840 --> 00:21:46,760
+starting to decrease significantly let's
+
+522
+00:21:46,760 --> 00:21:50,500
+get it down to just the one there we go
+
+523
+00:21:50,500 --> 00:21:53,510
+so we can optimize our rendering
+
+524
+00:21:53,510 --> 00:21:55,820
+framework very nicely in fact you could
+
+525
+00:21:55,820 --> 00:21:57,530
+take this further at the moment it's
+
+526
+00:21:57,530 --> 00:22:00,260
+still testing all of the lines that's
+
+527
+00:22:00,260 --> 00:22:02,450
+not necessary either why not only start
+
+528
+00:22:02,450 --> 00:22:04,520
+drawing from a location which you know
+
+529
+00:22:04,520 --> 00:22:05,180
+can be seen
+
+530
+00:22:05,180 --> 00:22:06,680
+you don't even need to do the tests at
+
+531
+00:22:06,680 --> 00:22:10,040
+all then and finally and very much just
+
+532
+00:22:10,040 --> 00:22:11,630
+for show enough I'll let you study this
+
+533
+00:22:11,630 --> 00:22:13,970
+on your own time we can also plot a
+
+534
+00:22:13,970 --> 00:22:16,340
+graph so let's make a lambda function
+
+535
+00:22:16,340 --> 00:22:18,590
+which always returns the sine f function
+
+536
+00:22:18,590 --> 00:22:19,850
+the reason I'm doing this is we can
+
+537
+00:22:19,850 --> 00:22:21,530
+easily change the nature of this
+
+538
+00:22:21,530 --> 00:22:22,970
+function and explore it in different
+
+539
+00:22:22,970 --> 00:22:25,910
+ways now this looks a little complicated
+
+540
+00:22:25,910 --> 00:22:28,100
+but I'll try and explain what's going on
+
+541
+00:22:28,100 --> 00:22:31,070
+I'm going to scroll across my entire
+
+542
+00:22:31,070 --> 00:22:33,050
+screen so I'm looking for all of the
+
+543
+00:22:33,050 --> 00:22:35,720
+visible pixels from left to right in
+
+544
+00:22:35,720 --> 00:22:38,750
+world space and in order to do that I
+
+545
+00:22:38,750 --> 00:22:40,820
+need to know what my world space per
+
+546
+00:22:40,820 --> 00:22:42,020
+screen pixel
+
+547
+00:22:42,020 --> 00:22:43,820
+is because I don't want to draw things
+
+548
+00:22:43,820 --> 00:22:45,830
+unnecessarily but I want to draw things
+
+549
+00:22:45,830 --> 00:22:48,170
+at high resolution as we zoom in so
+
+550
+00:22:48,170 --> 00:22:50,840
+calculating this screen width per pixel
+
+551
+00:22:50,840 --> 00:22:53,150
+is not that difficult I just take the
+
+552
+00:22:53,150 --> 00:22:55,520
+world right and world left values that I
+
+553
+00:22:55,520 --> 00:22:57,080
+calculated earlier and divide it by the
+
+554
+00:22:57,080 --> 00:22:58,760
+screen width that tells me how much
+
+555
+00:22:58,760 --> 00:23:01,490
+world space is attributed to each pixel
+
+556
+00:23:01,490 --> 00:23:03,530
+I'm going to store four integer
+
+557
+00:23:03,530 --> 00:23:05,480
+coordinates which are my pixels to be
+
+558
+00:23:05,480 --> 00:23:07,370
+drawn which is the current pixel and the
+
+559
+00:23:07,370 --> 00:23:09,410
+previous pixel because I don't want gaps
+
+560
+00:23:09,410 --> 00:23:11,450
+in my function either I wanted to draw a
+
+561
+00:23:11,450 --> 00:23:15,020
+line between successive values and this
+
+562
+00:23:15,020 --> 00:23:17,060
+line here is just the very first value
+
+563
+00:23:17,060 --> 00:23:18,920
+to draw so it doesn't draw from zero
+
+564
+00:23:18,920 --> 00:23:20,810
+zero each time on the function it draws
+
+565
+00:23:20,810 --> 00:23:23,570
+on the first visible valid location
+
+566
+00:23:23,570 --> 00:23:26,720
+along the x axis on the screen so I'm
+
+567
+00:23:26,720 --> 00:23:28,670
+going to loop from the left hand side of
+
+568
+00:23:28,670 --> 00:23:31,100
+the screen in world space to the right
+
+569
+00:23:31,100 --> 00:23:32,720
+hand side of the screen in world space
+
+570
+00:23:32,720 --> 00:23:36,530
+that's my x axis and for each valid
+
+571
+00:23:36,530 --> 00:23:38,630
+location I'm going to calculate the
+
+572
+00:23:38,630 --> 00:23:40,190
+function in this case it's up here in
+
+573
+00:23:40,190 --> 00:23:43,340
+this lambda function it's sign and I'm
+
+574
+00:23:43,340 --> 00:23:45,740
+going to offset it accordingly in world
+
+575
+00:23:45,740 --> 00:23:48,200
+space so my grid is effectively ten by
+
+576
+00:23:48,200 --> 00:23:50,060
+ten I want to locate it to the middle of
+
+577
+00:23:50,060 --> 00:23:52,160
+the grid and don't forget when we're
+
+578
+00:23:52,160 --> 00:23:54,590
+rendering on a computer screen positive
+
+579
+00:23:54,590 --> 00:23:57,560
+Y tends to be going down the screen this
+
+580
+00:23:57,560 --> 00:23:59,840
+is contradictory to mathematics as we
+
+581
+00:23:59,840 --> 00:24:01,400
+know it so I'm going to throw in a minus
+
+582
+00:24:01,400 --> 00:24:03,260
+sign so the sine function is the right
+
+583
+00:24:03,260 --> 00:24:06,410
+way up for each world space pixel I'm
+
+584
+00:24:06,410 --> 00:24:08,360
+going to calculate the screen space
+
+585
+00:24:08,360 --> 00:24:10,270
+equivalent and I'm going to draw a line
+
+586
+00:24:10,270 --> 00:24:15,830
+so let's take a look and we can see here
+
+587
+00:24:15,830 --> 00:24:17,480
+we've got something that looks crudely
+
+588
+00:24:17,480 --> 00:24:18,870
+like a sine wave but I need
+
+589
+00:24:18,870 --> 00:24:21,300
+to zoom in but it draws from the left to
+
+590
+00:24:21,300 --> 00:24:23,430
+the right of the screen at all times the
+
+591
+00:24:23,430 --> 00:24:24,750
+nice thing is it doesn't draw beyond
+
+592
+00:24:24,750 --> 00:24:27,270
+those locations and I can zoom in and
+
+593
+00:24:27,270 --> 00:24:29,790
+zoom in and zoom in and the function
+
+594
+00:24:29,790 --> 00:24:32,220
+never loses any accuracy and I can also
+
+595
+00:24:32,220 --> 00:24:42,450
+pan so a little bit of a rush at the end
+
+596
+00:24:42,450 --> 00:24:43,590
+there but it shows you just how
+
+597
+00:24:43,590 --> 00:24:45,510
+sophisticated having these very simple
+
+598
+00:24:45,510 --> 00:24:48,540
+transforms can be and so that's that a
+
+599
+00:24:48,540 --> 00:24:50,550
+very simple yet powerful programming
+
+600
+00:24:50,550 --> 00:24:52,440
+tool to add to your programmers toolbox
+
+601
+00:24:52,440 --> 00:24:54,030
+if you've enjoyed this video give me a
+
+602
+00:24:54,030 --> 00:24:55,230
+big thumbs up have a think about
+
+603
+00:24:55,230 --> 00:24:57,210
+subscribing all of this source code is
+
+604
+00:24:57,210 --> 00:24:58,950
+available on github to download and play
+
+605
+00:24:58,950 --> 00:25:00,240
+with you should come along to the
+
+606
+00:25:00,240 --> 00:25:02,280
+discord server and have a chat growing
+
+607
+00:25:02,280 --> 00:25:04,500
+everyday and take care I'll see you next
+
+608
+00:25:04,500 --> 00:25:06,770
+time
+
