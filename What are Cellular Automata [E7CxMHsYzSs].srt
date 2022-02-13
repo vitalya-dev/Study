@@ -1,0 +1,1380 @@
+1
+00:00:00,410 --> 00:00:03,540
+hello this week I created artificial
+
+2
+00:00:03,540 --> 00:00:05,660
+life but the command prompt of course
+
+3
+00:00:05,660 --> 00:00:07,919
+just look at how complicated and
+
+4
+00:00:07,919 --> 00:00:09,960
+sophisticated this life is I've got
+
+5
+00:00:09,960 --> 00:00:11,820
+clusters of individuals forming families
+
+6
+00:00:11,820 --> 00:00:13,740
+and groups fighting for resources and
+
+7
+00:00:13,740 --> 00:00:15,870
+competing for space they're breeding and
+
+8
+00:00:15,870 --> 00:00:17,550
+multiplying and occasionally you'll see
+
+9
+00:00:17,550 --> 00:00:19,260
+them sending out a member of the family
+
+10
+00:00:19,260 --> 00:00:22,010
+to go and interact with other clusters I
+
+11
+00:00:22,010 --> 00:00:24,330
+am of course talking about the British
+
+12
+00:00:24,330 --> 00:00:26,279
+mathematician John Conway's Game of Life
+
+13
+00:00:26,279 --> 00:00:28,380
+which is a class of cellular automata
+
+14
+00:00:28,380 --> 00:00:30,330
+now you might think that a really
+
+15
+00:00:30,330 --> 00:00:32,070
+complicated behavior like this would
+
+16
+00:00:32,070 --> 00:00:33,690
+take several thousands of lines of code
+
+17
+00:00:33,690 --> 00:00:36,420
+to implement in fact it doesn't it takes
+
+18
+00:00:36,420 --> 00:00:38,489
+about three and this is why cellular
+
+19
+00:00:38,489 --> 00:00:40,649
+automata are really cool you can take a
+
+20
+00:00:40,649 --> 00:00:43,110
+very simple rule set spread it across a
+
+21
+00:00:43,110 --> 00:00:45,750
+hugely parallel processing substrate and
+
+22
+00:00:45,750 --> 00:00:48,180
+the resulting emergent behavior can
+
+23
+00:00:48,180 --> 00:00:50,190
+exhibit all sorts of really complicated
+
+24
+00:00:50,190 --> 00:00:54,030
+phenomena like several of my other
+
+25
+00:00:54,030 --> 00:00:55,920
+videos this video we'll use the OLC
+
+26
+00:00:55,920 --> 00:00:58,739
+console game engine and you can click
+
+27
+00:00:58,739 --> 00:01:00,270
+the little link above to see more
+
+28
+00:01:00,270 --> 00:01:02,129
+details about that but essentially all
+
+29
+00:01:02,129 --> 00:01:03,899
+it does is wrap up the command prompt in
+
+30
+00:01:03,899 --> 00:01:05,640
+a display buffer so I can draw to it
+
+31
+00:01:05,640 --> 00:01:08,400
+easily to use the console game engine
+
+32
+00:01:08,400 --> 00:01:09,840
+you need to create a class that inherits
+
+33
+00:01:09,840 --> 00:01:12,600
+from it and overwrite two methods which
+
+34
+00:01:12,600 --> 00:01:14,840
+are on user create and on user update
+
+35
+00:01:14,840 --> 00:01:17,759
+I've called this class the game of life
+
+36
+00:01:17,759 --> 00:01:20,670
+and in our in main function now all we
+
+37
+00:01:20,670 --> 00:01:22,320
+need to do is create an instance of the
+
+38
+00:01:22,320 --> 00:01:24,509
+class the game of life class and tell it
+
+39
+00:01:24,509 --> 00:01:26,040
+what dimensions of the console we want
+
+40
+00:01:26,040 --> 00:01:28,140
+so to start with I'm going to use 160
+
+41
+00:01:28,140 --> 00:01:30,720
+characters across by 100 down and each
+
+42
+00:01:30,720 --> 00:01:32,790
+character is going to be 8 by 8 pixels I
+
+43
+00:01:32,790 --> 00:01:35,280
+then call the start function which will
+
+44
+00:01:35,280 --> 00:01:37,380
+then repeatedly call the unused update
+
+45
+00:01:37,380 --> 00:01:39,540
+function this algorithm holds a
+
+46
+00:01:39,540 --> 00:01:40,860
+particularly special place in my heart
+
+47
+00:01:40,860 --> 00:01:42,899
+as long as there have been computers
+
+48
+00:01:42,899 --> 00:01:44,579
+there were people programming John
+
+49
+00:01:44,579 --> 00:01:46,619
+Conway's Game of Life for them now for a
+
+50
+00:01:46,619 --> 00:01:48,420
+number of years I worked in academia and
+
+51
+00:01:48,420 --> 00:01:50,399
+I worked in a field where we developed a
+
+52
+00:01:50,399 --> 00:01:52,259
+technology called cellular processor
+
+53
+00:01:52,259 --> 00:01:52,829
+arrays
+
+54
+00:01:52,829 --> 00:01:54,720
+these are highly parallel processing
+
+55
+00:01:54,720 --> 00:01:56,700
+devices and to test them we would always
+
+56
+00:01:56,700 --> 00:01:58,439
+run game of life because if we saw that
+
+57
+00:01:58,439 --> 00:01:59,969
+it could run life it could probably do
+
+58
+00:01:59,969 --> 00:02:01,469
+all the other complicated things we
+
+59
+00:02:01,469 --> 00:02:03,240
+needed them to do I'm not going to go
+
+60
+00:02:03,240 --> 00:02:04,680
+into the history of game of life there's
+
+61
+00:02:04,680 --> 00:02:06,329
+an excellent Wikipedia article that will
+
+62
+00:02:06,329 --> 00:02:07,229
+do just that
+
+63
+00:02:07,229 --> 00:02:08,788
+and we'll be using this article as a
+
+64
+00:02:08,788 --> 00:02:10,199
+source of inspiration to try out
+
+65
+00:02:10,199 --> 00:02:12,690
+different patterns the sheer amount of
+
+66
+00:02:12,690 --> 00:02:13,470
+research
+
+67
+00:02:13,470 --> 00:02:16,050
+again flight is vast mathematicians love
+
+68
+00:02:16,050 --> 00:02:17,880
+it computer scientists love it and
+
+69
+00:02:17,880 --> 00:02:18,960
+people have proven that it's got all
+
+70
+00:02:18,960 --> 00:02:21,390
+sorts of fantastic properties for
+
+71
+00:02:21,390 --> 00:02:23,370
+example it's quite possible to set up a
+
+72
+00:02:23,370 --> 00:02:25,110
+pattern where the little critters will
+
+73
+00:02:25,110 --> 00:02:27,030
+move around and implement a fully
+
+74
+00:02:27,030 --> 00:02:29,670
+functional computer the marula patterns
+
+75
+00:02:29,670 --> 00:02:31,380
+which can emulate circuits and people
+
+76
+00:02:31,380 --> 00:02:33,330
+are using it for generating music and
+
+77
+00:02:33,330 --> 00:02:35,790
+all sorts of interesting sequences but
+
+78
+00:02:35,790 --> 00:02:38,370
+fundamentally the whole phenomena stems
+
+79
+00:02:38,370 --> 00:02:40,740
+from very simple rules and I mean very
+
+80
+00:02:40,740 --> 00:02:42,690
+simple rules and this is why it's such
+
+81
+00:02:42,690 --> 00:02:44,430
+an interesting algorithm how do you get
+
+82
+00:02:44,430 --> 00:02:46,680
+all this complex we call it emergent
+
+83
+00:02:46,680 --> 00:02:50,010
+behavior after such a simple rule set so
+
+84
+00:02:50,010 --> 00:02:52,560
+how do we make cellular automata well
+
+85
+00:02:52,560 --> 00:02:53,940
+the first thing you're going to need is
+
+86
+00:02:53,940 --> 00:02:56,370
+a grid and in this case I'm using a
+
+87
+00:02:56,370 --> 00:02:59,310
+2-dimensional grid of squares where a
+
+88
+00:02:59,310 --> 00:03:02,130
+cell is directly connected to its
+
+89
+00:03:02,130 --> 00:03:07,800
+immediate neighbors every cell in the
+
+90
+00:03:07,800 --> 00:03:10,170
+grid executes the program and all of
+
+91
+00:03:10,170 --> 00:03:12,390
+these programs are identical but they
+
+92
+00:03:12,390 --> 00:03:15,930
+operate on local data each cell contains
+
+93
+00:03:15,930 --> 00:03:18,570
+a memory which can be used to store its
+
+94
+00:03:18,570 --> 00:03:21,120
+current state and for game of life this
+
+95
+00:03:21,120 --> 00:03:23,880
+is very simple it's simply on or off but
+
+96
+00:03:23,880 --> 00:03:26,040
+it could be much more complicated each
+
+97
+00:03:26,040 --> 00:03:28,290
+cell has the ability to interact on
+
+98
+00:03:28,290 --> 00:03:31,489
+communicate with its neighbors and
+
+99
+00:03:31,489 --> 00:03:33,750
+finally but this is the most important
+
+100
+00:03:33,750 --> 00:03:37,050
+part all of the cells run a program but
+
+101
+00:03:37,050 --> 00:03:39,269
+they all run the same program and they
+
+102
+00:03:39,269 --> 00:03:41,220
+all run the same program synchronized
+
+103
+00:03:41,220 --> 00:03:42,030
+with each other
+
+104
+00:03:42,030 --> 00:03:44,790
+this gives way to the SIMD paradigm
+
+105
+00:03:44,790 --> 00:03:47,220
+single instruction multiple data where a
+
+106
+00:03:47,220 --> 00:03:49,110
+single instruction is broadcast across
+
+107
+00:03:49,110 --> 00:03:51,600
+the whole processing array but it uses
+
+108
+00:03:51,600 --> 00:03:53,670
+these local data to operate on
+
+109
+00:03:53,670 --> 00:03:58,200
+so this SIMD approach coupled with a
+
+110
+00:03:58,200 --> 00:04:01,760
+neighbor communication
+
+111
+00:04:01,920 --> 00:04:07,020
+gives rise to cellular automata the
+
+112
+00:04:07,020 --> 00:04:08,819
+program for game of life is very simple
+
+113
+00:04:08,819 --> 00:04:13,220
+step one we count our neighbors
+
+114
+00:04:13,220 --> 00:04:15,980
+so let's assume I am this cell in the
+
+115
+00:04:15,980 --> 00:04:18,950
+middle here and I have some alive
+
+116
+00:04:18,950 --> 00:04:20,298
+neighbors and I was going to be
+
+117
+00:04:20,298 --> 00:04:25,460
+indicated by red dots we can only talk
+
+118
+00:04:25,460 --> 00:04:26,540
+to the neighbors in our immediate
+
+119
+00:04:26,540 --> 00:04:30,430
+vicinity so this gives us a 3x3 square
+
+120
+00:04:30,430 --> 00:04:33,890
+around the active cell and we can count
+
+121
+00:04:33,890 --> 00:04:35,870
+how many red dots are in this square so
+
+122
+00:04:35,870 --> 00:04:38,270
+in this case it's three now this is
+
+123
+00:04:38,270 --> 00:04:39,710
+where we introduce some very simple
+
+124
+00:04:39,710 --> 00:04:43,340
+rules let's consider the rules when the
+
+125
+00:04:43,340 --> 00:04:44,480
+cell is alive ie
+
+126
+00:04:44,480 --> 00:04:46,490
+its output is set to one so it's got
+
+127
+00:04:46,490 --> 00:04:48,860
+blue dot or it's a red dot II if the
+
+128
+00:04:48,860 --> 00:04:51,680
+cell is alive and has less than two
+
+129
+00:04:51,680 --> 00:04:57,890
+neighbors it dies from loneliness if it
+
+130
+00:04:57,890 --> 00:05:00,860
+has greater than three neighbors it dies
+
+131
+00:05:00,860 --> 00:05:04,580
+from overcrowding otherwise the cell has
+
+132
+00:05:04,580 --> 00:05:06,290
+a good number of neighbors and is happy
+
+133
+00:05:06,290 --> 00:05:08,630
+we'll put a smiley face on and it stays
+
+134
+00:05:08,630 --> 00:05:12,250
+alive now let's consider a dead cell
+
+135
+00:05:12,250 --> 00:05:15,590
+it's not outputting anything but in the
+
+136
+00:05:15,590 --> 00:05:18,620
+weird world of John Conway if a cell has
+
+137
+00:05:18,620 --> 00:05:21,290
+three neighbors and it's dead those
+
+138
+00:05:21,290 --> 00:05:23,660
+three neighbors get together and produce
+
+139
+00:05:23,660 --> 00:05:27,710
+a living cell and so in this instance
+
+140
+00:05:27,710 --> 00:05:32,000
+this cell now becomes active in fact so
+
+141
+00:05:32,000 --> 00:05:35,210
+does this one because it - also has
+
+142
+00:05:35,210 --> 00:05:37,970
+three active neighbors and that's it
+
+143
+00:05:37,970 --> 00:05:40,070
+that really is how simple the rule set
+
+144
+00:05:40,070 --> 00:05:41,750
+is but there is one more important thing
+
+145
+00:05:41,750 --> 00:05:44,000
+to do we have to do everything at the
+
+146
+00:05:44,000 --> 00:05:47,030
+same time we cannot scroll through the
+
+147
+00:05:47,030 --> 00:05:49,400
+cells one by one and update them as
+
+148
+00:05:49,400 --> 00:05:51,560
+necessary instead we have to treat all
+
+149
+00:05:51,560 --> 00:05:54,110
+of the cells as if they're in one Epoque
+
+150
+00:05:54,110 --> 00:05:56,360
+of time as we carry on scrolling through
+
+151
+00:05:56,360 --> 00:05:58,400
+the cells we can't count the ones that
+
+152
+00:05:58,400 --> 00:05:59,990
+have already been set on this epoch or
+
+153
+00:05:59,990 --> 00:06:01,490
+else this one would also become alive
+
+154
+00:06:01,490 --> 00:06:03,200
+and then this one would also become
+
+155
+00:06:03,200 --> 00:06:05,320
+alive and these are incorrect results
+
+156
+00:06:05,320 --> 00:06:07,550
+having seen how simple the rule set is
+
+157
+00:06:07,550 --> 00:06:09,380
+it's time to do this in code and I'm
+
+158
+00:06:09,380 --> 00:06:10,940
+going to do this by creating two two
+
+159
+00:06:10,940 --> 00:06:12,770
+dimensional arrays one that represents
+
+160
+00:06:12,770 --> 00:06:14,450
+the output and one that represents the
+
+161
+00:06:14,450 --> 00:06:16,490
+current state of the cell so the output
+
+162
+00:06:16,490 --> 00:06:17,810
+is what basically we'll see on the
+
+163
+00:06:17,810 --> 00:06:19,940
+screen and the state is the current
+
+164
+00:06:19,940 --> 00:06:22,250
+memory within the cell in the unused
+
+165
+00:06:22,250 --> 00:06:23,870
+create function I'm going to now
+
+166
+00:06:23,870 --> 00:06:25,310
+allocate the memory for my two two
+
+167
+00:06:25,310 --> 00:06:26,870
+dimensional arrays and I'm going to
+
+168
+00:06:26,870 --> 00:06:28,340
+use the screen width and screen height
+
+169
+00:06:28,340 --> 00:06:31,130
+so that's the 160 by the 100 characters
+
+170
+00:06:31,130 --> 00:06:32,570
+that we set before and this means I can
+
+171
+00:06:32,570 --> 00:06:34,340
+choose a console of any size and life
+
+172
+00:06:34,340 --> 00:06:36,590
+should function appropriately just for
+
+173
+00:06:36,590 --> 00:06:38,390
+good practice I'm then going to set both
+
+174
+00:06:38,390 --> 00:06:42,410
+of these arrays to zeros now I'm working
+
+175
+00:06:42,410 --> 00:06:44,630
+with 2d arrays it's often easier to work
+
+176
+00:06:44,630 --> 00:06:46,760
+with two-dimensional coordinates so I'm
+
+177
+00:06:46,760 --> 00:06:48,110
+going to create a little lambda function
+
+178
+00:06:48,110 --> 00:06:50,360
+here to make it a little bit easier for
+
+179
+00:06:50,360 --> 00:06:59,300
+me to access the array and in this case
+
+180
+00:06:59,300 --> 00:07:01,370
+I want this lambda function to return
+
+181
+00:07:01,370 --> 00:07:04,820
+the value of the output array depending
+
+182
+00:07:04,820 --> 00:07:06,650
+on my x and y coordinates I'm using the
+
+183
+00:07:06,650 --> 00:07:08,750
+screen width here to multiply by the way
+
+184
+00:07:08,750 --> 00:07:10,730
+I'm going to treat the on user update
+
+185
+00:07:10,730 --> 00:07:12,590
+function as if it's a single epoch so
+
+186
+00:07:12,590 --> 00:07:14,840
+every time this function is called we're
+
+187
+00:07:14,840 --> 00:07:17,000
+going to do a full update of the entire
+
+188
+00:07:17,000 --> 00:07:19,190
+array but before we start to modify the
+
+189
+00:07:19,190 --> 00:07:21,590
+state of the array we need to store it
+
+190
+00:07:21,590 --> 00:07:23,540
+in the output so now we're free to
+
+191
+00:07:23,540 --> 00:07:25,910
+interrogate the output and change the
+
+192
+00:07:25,910 --> 00:07:27,890
+state of the cell I'm going to use two
+
+193
+00:07:27,890 --> 00:07:30,290
+nested for loops to iterate through all
+
+194
+00:07:30,290 --> 00:07:31,580
+of the cells and you'll notice I'm
+
+195
+00:07:31,580 --> 00:07:33,260
+starting them from the coordinates 1 and
+
+196
+00:07:33,260 --> 00:07:35,210
+I'm going to the screen with minus 1 on
+
+197
+00:07:35,210 --> 00:07:36,950
+the screen height minus 1 I'm doing this
+
+198
+00:07:36,950 --> 00:07:38,450
+to avoid reading memory which isn't
+
+199
+00:07:38,450 --> 00:07:40,040
+there there are actually several
+
+200
+00:07:40,040 --> 00:07:42,020
+approaches in cellular automata so what
+
+201
+00:07:42,020 --> 00:07:43,670
+to do with the boundaries in this case
+
+202
+00:07:43,670 --> 00:07:45,110
+I'm just ignoring it they're going to
+
+203
+00:07:45,110 --> 00:07:46,970
+remain fixed but some people do actually
+
+204
+00:07:46,970 --> 00:07:49,010
+prefer to have ongoing periodic so as
+
+205
+00:07:49,010 --> 00:07:51,650
+the cells activity goes up one side it
+
+206
+00:07:51,650 --> 00:07:54,050
+appears on the other the first part of
+
+207
+00:07:54,050 --> 00:07:55,640
+the algorithm said we need to count the
+
+208
+00:07:55,640 --> 00:07:57,080
+number of cells in our immediate
+
+209
+00:07:57,080 --> 00:08:01,010
+neighborhood well I can use the cell
+
+210
+00:08:01,010 --> 00:08:02,810
+lambda function that I created before to
+
+211
+00:08:02,810 --> 00:08:04,250
+help me with this so it's just the
+
+212
+00:08:04,250 --> 00:08:07,790
+current coordinate minus one and this is
+
+213
+00:08:07,790 --> 00:08:11,600
+the northwesterly cell now because the
+
+214
+00:08:11,600 --> 00:08:13,610
+value is either a zero one I can just
+
+215
+00:08:13,610 --> 00:08:15,820
+keep adding these and count them as I go
+
+216
+00:08:15,820 --> 00:08:18,290
+so in this case I'm not moving along in
+
+217
+00:08:18,290 --> 00:08:20,810
+the x axis I'm going to put a plus zero
+
+218
+00:08:20,810 --> 00:08:23,390
+in here just to keep it consistent but
+
+219
+00:08:23,390 --> 00:08:27,500
+I'm still on the row above and I do this
+
+220
+00:08:27,500 --> 00:08:30,110
+for all of my neighbors so here is the
+
+221
+00:08:30,110 --> 00:08:33,740
+North West and here is the South East
+
+222
+00:08:33,740 --> 00:08:36,110
+I then need to behave differently
+
+223
+00:08:36,110 --> 00:08:38,299
+depending on whether the current cell is
+
+224
+00:08:38,299 --> 00:08:40,370
+alive or dead and we
+
+225
+00:08:40,370 --> 00:08:41,900
+do that by just checking the output so
+
+226
+00:08:41,900 --> 00:08:43,820
+if the current cell is alive it's set to
+
+227
+00:08:43,820 --> 00:08:46,730
+1 now if I'm alive and I have 2 or 3
+
+228
+00:08:46,730 --> 00:08:49,370
+neighbors as said before I'll remain
+
+229
+00:08:49,370 --> 00:08:51,260
+alive I'll carry on being alive however
+
+230
+00:08:51,260 --> 00:08:54,020
+in any other condition I'll die so here
+
+231
+00:08:54,020 --> 00:08:55,790
+I've got a little boolean check and I'm
+
+232
+00:08:55,790 --> 00:08:57,290
+kind of cheating I'm forcing a boolean
+
+233
+00:08:57,290 --> 00:08:59,420
+to be an integer value in this case so
+
+234
+00:08:59,420 --> 00:09:00,830
+if I've got two neighbors or three
+
+235
+00:09:00,830 --> 00:09:02,390
+neighbors I remain alive because that'll
+
+236
+00:09:02,390 --> 00:09:04,400
+return true anything else will return
+
+237
+00:09:04,400 --> 00:09:07,400
+false and kill the cell if I'm not alive
+
+238
+00:09:07,400 --> 00:09:10,760
+then I only become alive if the number
+
+239
+00:09:10,760 --> 00:09:12,520
+of neighbors is equal to three
+
+240
+00:09:12,520 --> 00:09:14,540
+since we're iterating through all the
+
+241
+00:09:14,540 --> 00:09:17,630
+cells in a nested for loop I might as
+
+242
+00:09:17,630 --> 00:09:18,710
+well take advantage of this opportunity
+
+243
+00:09:18,710 --> 00:09:21,650
+to draw them and to do this all I'm
+
+244
+00:09:21,650 --> 00:09:23,270
+going to do is again check whether the
+
+245
+00:09:23,270 --> 00:09:24,980
+current cell is alive or not and if it
+
+246
+00:09:24,980 --> 00:09:26,480
+is I'm going to draw a white character
+
+247
+00:09:26,480 --> 00:09:28,160
+and if it isn't I'm going to draw a
+
+248
+00:09:28,160 --> 00:09:32,360
+black character and that's it the
+
+249
+00:09:32,360 --> 00:09:33,950
+highlighted code is all we need to
+
+250
+00:09:33,950 --> 00:09:36,500
+implement game of life let's run it and
+
+251
+00:09:36,500 --> 00:09:39,470
+see what happens so you can see the
+
+252
+00:09:39,470 --> 00:09:41,810
+console is popped up but hang on there's
+
+253
+00:09:41,810 --> 00:09:45,020
+no life oh dear well that's because we
+
+254
+00:09:45,020 --> 00:09:46,640
+haven't got any starting cells we
+
+255
+00:09:46,640 --> 00:09:48,380
+initialize all of our memory to zero to
+
+256
+00:09:48,380 --> 00:09:50,420
+begin with well we need some cells to
+
+257
+00:09:50,420 --> 00:09:52,760
+breed to produce a new cell to test if
+
+258
+00:09:52,760 --> 00:09:54,140
+the algorithm works or not I'm going to
+
+259
+00:09:54,140 --> 00:09:56,420
+go through each cell and set the state
+
+260
+00:09:56,420 --> 00:10:01,540
+randomly to zero or one let's try again
+
+261
+00:10:01,570 --> 00:10:03,770
+perfect there we go we can see life
+
+262
+00:10:03,770 --> 00:10:06,940
+quite happily living
+
+263
+00:10:10,970 --> 00:10:12,589
+I'm going to add a little bit of input
+
+264
+00:10:12,589 --> 00:10:14,600
+handling code here to check whether I'm
+
+265
+00:10:14,600 --> 00:10:16,009
+holding down the space key because I
+
+266
+00:10:16,009 --> 00:10:17,480
+only want life to evolve if I'm holding
+
+267
+00:10:17,480 --> 00:10:19,310
+the key down this allows us to stop it
+
+268
+00:10:19,310 --> 00:10:24,139
+and analyze it so I hold the space down
+
+269
+00:10:24,139 --> 00:10:30,290
+and let go and we can see life stops as
+
+270
+00:10:30,290 --> 00:10:32,060
+people began to study the game of life
+
+271
+00:10:32,060 --> 00:10:34,009
+they realize that certain patterns
+
+272
+00:10:34,009 --> 00:10:36,589
+exhibited certain behaviors the
+
+273
+00:10:36,589 --> 00:10:38,089
+Wikipedia article lists some of these
+
+274
+00:10:38,089 --> 00:10:39,649
+and I thought it would be fun to try and
+
+275
+00:10:39,649 --> 00:10:41,839
+study them more closely so instead of
+
+276
+00:10:41,839 --> 00:10:43,730
+starting with a random state for all of
+
+277
+00:10:43,730 --> 00:10:45,949
+the cells I'm going to manually set the
+
+278
+00:10:45,949 --> 00:10:48,319
+state of some of the cells now I could
+
+279
+00:10:48,319 --> 00:10:50,629
+do this like so where I manually specify
+
+280
+00:10:50,629 --> 00:10:53,000
+the coordinates of the cells and put
+
+281
+00:10:53,000 --> 00:10:54,410
+them into the array however this will
+
+282
+00:10:54,410 --> 00:10:55,759
+make it a bit tedious to enter the
+
+283
+00:10:55,759 --> 00:10:58,370
+patterns so I'm going to try something a
+
+284
+00:10:58,370 --> 00:11:00,980
+bit more visual as before I'm going to
+
+285
+00:11:00,980 --> 00:11:02,839
+create a little lambda function except
+
+286
+00:11:02,839 --> 00:11:04,430
+this time it's resetting the value of
+
+287
+00:11:04,430 --> 00:11:06,800
+the cell so again it takes an X and a
+
+288
+00:11:06,800 --> 00:11:10,000
+y-coordinate it also takes a type string
+
+289
+00:11:10,000 --> 00:11:12,199
+the contents of this lambda function
+
+290
+00:11:12,199 --> 00:11:13,490
+will iterate through the string
+
+291
+00:11:13,490 --> 00:11:15,500
+character by character and if the
+
+292
+00:11:15,500 --> 00:11:18,290
+character is a hash it specifies a 1 in
+
+293
+00:11:18,290 --> 00:11:22,600
+that state location otherwise it's a 0
+
+294
+00:11:22,600 --> 00:11:25,069
+this leaves us now with a much nicer
+
+295
+00:11:25,069 --> 00:11:29,410
+syntax for specifying starting shapes
+
+296
+00:11:31,899 --> 00:11:34,490
+where I can visually see what the shape
+
+297
+00:11:34,490 --> 00:11:36,500
+should look like to start with let's
+
+298
+00:11:36,500 --> 00:11:40,870
+have a look this is the our pentomino
+
+299
+00:11:45,610 --> 00:11:49,050
+I don't like the space bar thing now
+
+300
+00:11:49,050 --> 00:11:51,370
+instead I'm just going to slow the Fed
+
+301
+00:11:51,370 --> 00:11:56,950
+down with a wait so from that starting
+
+302
+00:11:56,950 --> 00:11:59,709
+point we can see it grow and we can see
+
+303
+00:11:59,709 --> 00:12:01,810
+we've got some spinners and some gliders
+
+304
+00:12:01,810 --> 00:12:03,519
+the gliders are the ones that travel a
+
+305
+00:12:03,519 --> 00:12:09,670
+great distance let's try something a bit
+
+306
+00:12:09,670 --> 00:12:13,320
+more interesting the gospel glider gun
+
+307
+00:12:13,320 --> 00:12:15,700
+this is an example of an automatic
+
+308
+00:12:15,700 --> 00:12:17,410
+producing something with a more usable
+
+309
+00:12:17,410 --> 00:12:23,529
+output let's take a look so here we can
+
+310
+00:12:23,529 --> 00:12:25,209
+see there's some bouncing back and forth
+
+311
+00:12:25,209 --> 00:12:27,279
+between two starting points but it
+
+312
+00:12:27,279 --> 00:12:33,700
+continuously emits gliders our little
+
+313
+00:12:33,700 --> 00:12:35,050
+life-forms have managed to create a
+
+314
+00:12:35,050 --> 00:12:39,070
+sequence and don't forget this really
+
+315
+00:12:39,070 --> 00:12:41,200
+complicated behavior is influences with
+
+316
+00:12:41,200 --> 00:12:43,600
+just two if statements mathematicians
+
+317
+00:12:43,600 --> 00:12:45,130
+also found out that it's possible to
+
+318
+00:12:45,130 --> 00:12:47,050
+have patterns which exhibit infinite
+
+319
+00:12:47,050 --> 00:12:49,390
+growth let's have a look at this one
+
+320
+00:12:49,390 --> 00:12:50,920
+this one's all implemented in a single
+
+321
+00:12:50,920 --> 00:12:53,160
+line
+
+322
+00:13:05,640 --> 00:13:08,910
+I like the symmetry of this one cellular
+
+323
+00:13:08,910 --> 00:13:11,190
+automata on a sequential machine like my
+
+324
+00:13:11,190 --> 00:13:13,650
+desktop PC can be quite demanding of the
+
+325
+00:13:13,650 --> 00:13:16,830
+processor so I'm going to set it back to
+
+326
+00:13:16,830 --> 00:13:21,060
+just doing a random start and I set it
+
+327
+00:13:21,060 --> 00:13:24,900
+to release mode and I'm going to double
+
+328
+00:13:24,900 --> 00:13:31,200
+the resolution of my console but half
+
+329
+00:13:31,200 --> 00:13:37,110
+the size of the font and just let it run
+
+330
+00:13:37,110 --> 00:13:42,840
+away cellular automata is an intriguing
+
+331
+00:13:42,840 --> 00:13:44,580
+field of research and I've only shown
+
+332
+00:13:44,580 --> 00:13:47,070
+one very simple algorithm out of many
+
+333
+00:13:47,070 --> 00:13:49,500
+many hundreds it's not just interesting
+
+334
+00:13:49,500 --> 00:13:50,550
+to mathematicians and computer
+
+335
+00:13:50,550 --> 00:13:53,010
+scientists people are now searching for
+
+336
+00:13:53,010 --> 00:13:54,720
+it in biology and there's some evidence
+
+337
+00:13:54,720 --> 00:13:57,270
+to suggest that cells in the body might
+
+338
+00:13:57,270 --> 00:13:59,700
+also interact in this way whatever you
+
+339
+00:13:59,700 --> 00:14:01,530
+might think I think there is a definite
+
+340
+00:14:01,530 --> 00:14:03,390
+Beauty to the emergent behavior from
+
+341
+00:14:03,390 --> 00:14:06,270
+such a simple rule set as usual all the
+
+342
+00:14:06,270 --> 00:14:07,590
+source code is going to be available on
+
+343
+00:14:07,590 --> 00:14:09,330
+github if you've enjoyed this video give
+
+344
+00:14:09,330 --> 00:14:11,130
+me a big thumbs up I will think about
+
+345
+00:14:11,130 --> 00:14:14,780
+subscribing and I'll see you next time
+
