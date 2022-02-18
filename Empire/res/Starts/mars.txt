@@ -1,0 +1,14 @@
+COLONY
+START
+
+
+STRENGTH
+
+
+PEOPLE
+
+
+COLOUR
+
+
+END
