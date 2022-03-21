@@ -1,0 +1,7 @@
+В этой серии руководств мы рассмотрим использование редактора тайловых карт с открытым исходным кодом. Сегодня мы рассмотрим основы Tiled, как загружать наборы элементов мозаики и создавать карту. Как работает наслоение. Настройка объемов столкновений и даже анимированных плиток.
+
+
+In this second part of the Tiled series (Part 1: https://www.youtube.com/watch?v=Zwaom... ), we are now going to look at creating terrain brushes.  Terrain allows you to rapidly paint tiles of a similar type against a specific background.  This can be a huge time saver.
+
+
+In this tutorial we look at linking a Tiled map to your games code using an object layer.  We also look at some Phaser code as an example of loading a Tiled map.
